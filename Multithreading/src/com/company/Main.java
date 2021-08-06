@@ -3,6 +3,7 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
+        //1 way
         Thread t1 = new Thread() {
             public void run() {
                 System.out.println("Thread Running1");
@@ -10,10 +11,12 @@ public class Main {
         };
         t1.start();
 
+        //2 way
         MyThread t2 = new MyThread();
         t2.start();
 
-        Runnable runnable = ()->{
+        //3 way
+        Runnable runnable = () -> {
             System.out.println("Thread Running3");
         };
         Thread t3 = new Thread(runnable);
