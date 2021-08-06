@@ -2,11 +2,13 @@ package com.company;
 
 import java.util.Scanner;
 
+import static java.lang.System.in;
+
 public class Main {
 
     public static void main(String[] args) {
         System.out.println("Hello World");
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(in);
         int i = scanner.nextInt();
         System.out.println("You entered " + i);
 
@@ -43,5 +45,10 @@ public class Main {
             i++;
         }
         while (i < 4);
+
+        //arrays
+        String[] words = new String[]{"One", "Two", "Three"};
+        for (var c = 0; c < words.length; c++)
+            System.out.println(words[c]);
     }
 }
