@@ -25,15 +25,18 @@ public class Main {
          }
          **/
 
+        //for loop
         for (int cnt = 0; cnt < 4; cnt++)
             System.out.println("For loop: " + cnt);
 
+        //while loop
         i = 0;
         while (i < 4) {
             System.out.println("while loop: " + i);
             i++;
         }
 
+        //do while loop
         i = 0;
         do {
             System.out.println("do while loop: " + i);
