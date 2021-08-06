@@ -6,7 +6,7 @@ public class Main {
         IFigure f1 = new Circle();
         System.out.println(f1.GetName());
 
-        BaseCar c1 = new Tractor();
+        BaseCar c1 = new Tractor(22);
         System.out.println(c1.GetName());
     }
 }
