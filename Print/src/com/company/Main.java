@@ -27,5 +27,11 @@ public class Main {
 
         for (int cnt = 0; cnt < 4; cnt++)
             System.out.println("For loop: " + cnt);
+
+        i = 0;
+        while (i < 4) {
+            System.out.println("while loop: " + i);
+            i++;
+        }
     }
 }
