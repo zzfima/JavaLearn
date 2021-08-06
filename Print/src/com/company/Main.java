@@ -12,7 +12,6 @@ public class Main {
 
         switch (i) {
             case 10 -> System.out.println("You entered 10");
-            case 15 -> System.out.println("You entered 15");
             default -> System.out.println("You entered nor 10 nor 15");
         }
         /** OLD fashion switch
