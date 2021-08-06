@@ -15,14 +15,17 @@ public class Main {
             default -> System.out.println("You entered nor 10 nor 15");
         }
         /** OLD fashion switch
-        switch (i) {
-            case 10:
-                System.out.println("You entered 10");
-                break;
-            default:
-                System.out.println("You entered not 10");
-                break;
-        }
-        **/
+         switch (i) {
+         case 10:
+         System.out.println("You entered 10");
+         break;
+         default:
+         System.out.println("You entered not 10");
+         break;
+         }
+         **/
+
+        for (int cnt = 0; cnt < 4; cnt++)
+            System.out.println("For loop: " + cnt);
     }
 }
