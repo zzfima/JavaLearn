@@ -33,5 +33,12 @@ public class Main {
             System.out.println("while loop: " + i);
             i++;
         }
+
+        i = 0;
+        do {
+            System.out.println("do while loop: " + i);
+            i++;
+        }
+        while (i < 4);
     }
 }
