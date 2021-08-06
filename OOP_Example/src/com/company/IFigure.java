@@ -1,5 +1,5 @@
 package com.company;
 
-public interface Figure {
+public interface IFigure {
     String GetName();
 }
