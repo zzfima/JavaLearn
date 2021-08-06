@@ -50,5 +50,14 @@ public class Main {
         String[] words = new String[]{"One", "Two", "Three"};
         for (var c = 0; c < words.length; c++)
             System.out.println(words[c]);
+
+        //multi array
+        String[][] marr = new String[][]{
+                {"One", "Two", "Three"},
+                {"Ehad", "Shatim", "Shalosh"}
+        };
+        for (int i1 = 0; i1 < marr.length; i1++)
+            for (int i2 = 0; i2 < marr[i1].length; i2++)
+                System.out.println(marr[i1][i2]);
     }
 }
