@@ -16,16 +16,16 @@ public class Main {
             case 10 -> System.out.println("You entered 10");
             default -> System.out.println("You entered nor 10 nor 15");
         }
-        /* OLD fashion:
-         switch (i) {
-         case 10:
-         System.out.println("You entered 10");
-         break;
-         default:
-         System.out.println("You entered not 10");
-         break;
-         }
-         */
+        /* OLD fashion*/
+        switch (i) {
+            case 10:
+                System.out.println("You entered 10");
+                break;
+            default:
+                System.out.println("You entered not 10");
+                break;
+        }
+
 
         //for loop
         for (int cnt = 0; cnt < 4; cnt++)
@@ -49,16 +49,21 @@ public class Main {
         //arrays
         String[] words = new String[]{"One", "Two", "Three"};
         for (String word : words) System.out.println(word);
-        /* OLD fashion:
+        /* OLD fashion*/
         for (var c = 0; c < words.length; c++)
             System.out.println(words[c]);
-        * */
+
 
         //multi array
         String[][] marr = new String[][]{
                 {"One", "Two", "Three"},
                 {"Ehad", "Shatim", "Shalosh"}
         };
+        for (String[] strings : marr)
+            for (String string : strings)
+                System.out.println(string);
+
+        /* OLD fashion*/
         for (int i1 = 0; i1 < marr.length; i1++)
             for (int i2 = 0; i2 < marr[i1].length; i2++)
                 System.out.println(marr[i1][i2]);
