@@ -8,5 +8,7 @@ public class Main {
 
         BaseCar c1 = new Tractor(22);
         System.out.println(c1.GetName());
+
+        System.out.println(BaseCar.GetZero());
     }
 }
