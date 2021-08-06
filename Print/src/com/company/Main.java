@@ -67,5 +67,12 @@ public class Main {
         for (int i1 = 0; i1 < marr.length; i1++)
             for (int i2 = 0; i2 < marr[i1].length; i2++)
                 System.out.println(marr[i1][i2]);
+
+        int res = Calc();
+        System.out.println(res);
+    }
+
+    private static int Calc() {
+        return 11;
     }
 }
