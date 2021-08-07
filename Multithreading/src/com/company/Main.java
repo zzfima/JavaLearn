@@ -6,7 +6,7 @@ public class Main {
         //1 way
         Thread t1 = new Thread() {
             public void run() {
-                for (int i = 0; i < 10; i++) {
+                for (int i = 0; i < 100; i++) {
                     System.out.println("Thread Running1");
                 }
             }
@@ -19,7 +19,7 @@ public class Main {
 
         //3 way
         Runnable runnable = () -> {
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 100; i++)
                 System.out.println("Thread Running3");
         };
         Thread t3 = new Thread(runnable);
@@ -27,7 +27,7 @@ public class Main {
 
         //4 way
         (new Thread(() -> {
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 100; i++)
                 System.out.println("Thread Running4");
         })).start();
     }
@@ -35,7 +35,7 @@ public class Main {
 
 class MyThread extends Thread {
     public void run() {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 100; i++)
             System.out.println("Thread Running2");
     }
 }
