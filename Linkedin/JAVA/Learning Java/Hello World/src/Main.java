@@ -6,8 +6,8 @@ public class Main {
         System.out.println(msg + FFF.bbb + " " + msg.charAt(2));
 
         Scanner scanner = new Scanner(System.in);
-        int i = scanner.nextInt();
-        System.out.println(i);
+        String s = scanner.next();
+        System.out.println(s);
     }
 
     enum FFF {eee, bbb}
