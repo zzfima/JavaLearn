@@ -3,6 +3,8 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
+        String s1 = new String("marpf");
+        String s2 = new String("larpf");
         System.out.println(sum(1, 2));
         System.out.println(sum(1, 2, 3));
         System.out.println(sum(1, 2, 3, 4));
