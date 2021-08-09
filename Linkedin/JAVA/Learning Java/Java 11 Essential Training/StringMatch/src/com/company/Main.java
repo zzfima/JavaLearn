@@ -8,12 +8,20 @@ public class Main {
         String s3 = new String("Hello!");
         String s4 = new String("Hello!");
 
+        System.out.println("**********");
         System.out.println(s1 == s2 ? "Match" : "Do not match");
-
         System.out.println(s1 == s3 ? "Match" : "Do not match");
         System.out.println(s1 == s4 ? "Match" : "Do not match");
         System.out.println(s2 == s3 ? "Match" : "Do not match");
         System.out.println(s2 == s4 ? "Match" : "Do not match");
         System.out.println(s3 == s4 ? "Match" : "Do not match");
+
+        System.out.println("**********");
+        System.out.println(s1.equals(s2) ? "Match" : "Do not match");
+        System.out.println(s1.equals(s3) ? "Match" : "Do not match");
+        System.out.println(s1.equals(s4) ? "Match" : "Do not match");
+        System.out.println(s2.equals(s3) ? "Match" : "Do not match");
+        System.out.println(s2.equals(s4) ? "Match" : "Do not match");
+        System.out.println(s3.equals(s4) ? "Match" : "Do not match");
     }
 }
