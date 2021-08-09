@@ -16,5 +16,8 @@ public class Main {
 
         NumberFormat numCurrFormatUSA = NumberFormat.getCurrencyInstance(Locale.US);
         System.out.println(numCurrFormatUSA.format(345.6));
+
+        String items = String.format("My name is %s, my age is %d and my weight is %3f", "Coco", 56, 23.3);
+        System.out.println(items);
     }
 }
