@@ -16,5 +16,10 @@ public class Main {
         System.out.print("Inter your name: ");
         String name = scanner.nextLine();
         System.out.println("Your name is " + name);
+
+        System.out.println("please enter 2 numbers");
+        float f1 = scanner.nextFloat();
+        float f2 = scanner.nextFloat();
+        System.out.println(String.format("Number %.2f divide by number %.2f is %.2f", f1, f2, f1/f2));
     }
 }
