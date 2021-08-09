@@ -20,6 +20,14 @@ public class Main {
         System.out.println("please enter 2 numbers");
         float f1 = scanner.nextFloat();
         float f2 = scanner.nextFloat();
-        System.out.println(String.format("Number %.2f divide by number %.2f is %.2f", f1, f2, f1/f2));
+        System.out.println(String.format("Number %.2f divide by number %.2f is %.2f", f1, f2, f1 / f2));
+
+        switch ((int) f1) {
+            case 5:
+                System.out.println("is 5!");
+                break;
+            default:
+                System.out.println("its not 5");
+        }
     }
 }
