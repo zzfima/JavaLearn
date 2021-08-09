@@ -21,6 +21,12 @@ public class Main {
         for (int i = 0; i < months.length; i++)
             System.out.print(months[i] + " ");
 
+        printMonths(months);
+
+        printMonths(months);
+    }
+
+    private static void printMonths(String[] months) {
         System.out.println();
         for (String month : months)
             System.out.print(month + " ");
