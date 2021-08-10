@@ -12,13 +12,11 @@ public class Main {
     public static void main(String[] args) {
         File file = new File("text.txt");
 
-        if (!file.exists()) {
-            try {
-                file.createNewFile();
-            } catch (IOException e) {
-                System.out.println("Could not create file");
-                return;
-            }
+        try {
+            fileExistenceTreatment(file);
+        } catch (IOException e) {
+            System.out.println("Could not create file");
+            return;
         }
 
         List<String> lines = new ArrayList<>();
@@ -45,6 +43,11 @@ public class Main {
         lines.forEach(Main::print);
 
         lines.forEach(System.out::println);
+    }
+
+    private static void fileExistenceTreatment(File file) throws IOException {
+        if (!file.exists())
+            file.createNewFile();
     }
 
     static void print(String s) {
