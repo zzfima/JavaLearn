@@ -21,6 +21,7 @@ public class Main {
         itemsList.add(itemsArray[0]);
         itemsList.add(itemsArray[1]);
         getInfo(itemsList.toArray(itemsArray));
+        System.out.println(itemsList.get(0).getType());
     }
 
     public static void getInfo(ClothingItem... items) {
