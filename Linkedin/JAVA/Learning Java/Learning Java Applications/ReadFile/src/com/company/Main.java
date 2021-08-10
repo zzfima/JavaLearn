@@ -40,6 +40,14 @@ public class Main {
         }
 
         System.out.println("*** lambda ***");
-        lines.forEach((s)-> System.out.println(s));
+        lines.forEach((s) -> System.out.println('*' + s));
+
+        lines.forEach(Main::print);
+
+        lines.forEach(System.out::println);
+    }
+
+    static void print(String s) {
+        System.out.println('-' + s);
     }
 }
