@@ -12,6 +12,7 @@ public class ClockGUI extends JFrame {
     private JTextField txtClock;
     private JLabel lblClock;
     private JProgressBar progressBarClock;
+    private JButton buttonCheckBox;
     private int cnt;
 
     public ClockGUI(String title) {
@@ -37,6 +38,15 @@ public class ClockGUI extends JFrame {
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.setContentPane(mainPanel);
         this.pack();
+        buttonCheckBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                lblClock.setText("");
+                txtClock.setText("");
+                cnt = 0;
+                progressBarClock.setValue(cnt);
+            }
+        });
     }
 
     public static void main(String[] args) {
