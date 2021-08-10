@@ -9,7 +9,8 @@ import java.util.Calendar;
 public class ClockGUI extends JFrame {
     private JButton btnClock;
     private JPanel mainPanel;
-    private JTextField textField1;
+    private JTextField txtClock;
+    private JLabel lblClock;
 
     public ClockGUI(String title) {
         super(title);
@@ -19,7 +20,9 @@ public class ClockGUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Calendar calendar = Calendar.getInstance();
                 SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-                textField1.setText(formatter.format(calendar.getTime()));
+                String msg = formatter.format(calendar.getTime());
+                txtClock.setText(msg);
+                lblClock.setText(msg);
             }
         });
 
