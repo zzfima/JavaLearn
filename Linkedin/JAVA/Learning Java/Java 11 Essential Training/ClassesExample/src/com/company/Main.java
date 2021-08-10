@@ -10,7 +10,7 @@ public class Main {
         clothingItem.setQuantity(4);
         System.out.println(clothingItem.getQuantity());
 
-        ClothingItem clothingItem1 = new ClothingItem(14, 44.3, "", ClothingSize.Medium);
+        ClothingItem clothingItem1 = new ClothingItem(14, 44.3, "", ClothingSize.M);
         System.out.println(clothingItem1.getSize());
 
         System.out.println(ClothingItem.MAX_QUANTITY);

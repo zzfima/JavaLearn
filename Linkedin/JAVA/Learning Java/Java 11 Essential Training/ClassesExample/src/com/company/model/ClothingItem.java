@@ -14,7 +14,7 @@ public class ClothingItem {
         this.quantity = 0;
         this.price = 0D;
         this.type = "";
-        this.size = ClothingSize.Small;
+        this.size = ClothingSize.S;
     }
 
     public ClothingItem(int quantity, double price, String type, ClothingSize size) {
