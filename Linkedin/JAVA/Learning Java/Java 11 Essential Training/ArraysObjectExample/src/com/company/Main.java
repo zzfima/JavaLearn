@@ -17,7 +17,7 @@ public class Main {
         };
         getInfo(itemsArray);
 
-        List<ClothingItem> itemsList = new ArrayList<ClothingItem>();
+        List<ClothingItem> itemsList = new ArrayList();
         itemsList.add(itemsArray[0]);
         itemsList.add(itemsArray[1]);
         getInfo(itemsList.toArray(itemsArray));
