@@ -1,6 +1,8 @@
 package com.company.model;
 
 public class ClothingItem {
+    public static final int MAX_QUANTITY = 40;
+    
     //Fields
     private final double price;
     private final String type;

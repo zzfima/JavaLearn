@@ -11,5 +11,7 @@ public class Main {
 
         ClothingItem clothingItem1 = new ClothingItem(14, 44.3, "", "");
         System.out.println(clothingItem1.getQuantity());
+
+        System.out.println(ClothingItem.MAX_QUANTITY);
     }
 }
