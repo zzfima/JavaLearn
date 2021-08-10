@@ -11,9 +11,12 @@ public class ClockGUI extends JFrame {
     private JPanel mainPanel;
     private JTextField txtClock;
     private JLabel lblClock;
+    private JProgressBar progressBarClock;
+    private int cnt;
 
     public ClockGUI(String title) {
         super(title);
+        cnt = 0;
 
         btnClock.addActionListener(new ActionListener() {
             @Override
@@ -23,6 +26,11 @@ public class ClockGUI extends JFrame {
                 String msg = formatter.format(calendar.getTime());
                 txtClock.setText(msg);
                 lblClock.setText(msg);
+
+                cnt += 10;
+                if (cnt == 110)
+                    cnt = 0;
+                progressBarClock.setValue(cnt);
             }
         });
 
