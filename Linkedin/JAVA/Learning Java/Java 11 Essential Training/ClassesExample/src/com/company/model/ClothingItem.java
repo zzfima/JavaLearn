@@ -7,17 +7,17 @@ public class ClothingItem {
     private final double price;
     private final String type;
     private int quantity;
-    private String size;
+    private ClothingSize size;
 
     //constructors
     public ClothingItem() {
         this.quantity = 0;
         this.price = 0D;
         this.type = "";
-        this.size = "";
+        this.size = ClothingSize.Small;
     }
 
-    public ClothingItem(int quantity, double price, String type, String size) {
+    public ClothingItem(int quantity, double price, String type, ClothingSize size) {
         this.quantity = quantity;
         this.price = price;
         this.type = type;
@@ -33,11 +33,11 @@ public class ClothingItem {
         return type;
     }
 
-    public String getSize() {
+    public ClothingSize getSize() {
         return size;
     }
 
-    public void setSize(String size) {
+    public void setSize(ClothingSize size) {
         this.size = size;
     }
 
