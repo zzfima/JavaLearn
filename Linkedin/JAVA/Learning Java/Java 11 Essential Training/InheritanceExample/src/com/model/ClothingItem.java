@@ -3,6 +3,10 @@ package com.model;
 public class ClothingItem {
     private String size;
 
+    public ClothingItem(){
+        this.size = "";
+    }
+
     public ClothingItem(String size) {
         this.size = size;
     }
