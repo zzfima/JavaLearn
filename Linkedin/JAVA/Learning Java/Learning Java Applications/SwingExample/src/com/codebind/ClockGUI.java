@@ -16,6 +16,10 @@ public class ClockGUI extends JFrame {
     private JLabel lblClock;
     private JProgressBar progressBarClock;
     private JButton btnClear;
+    private JRadioButton radioButton1RadioButton;
+    private JRadioButton radioButton2RadioButton;
+    private JRadioButton radioButton3RadioButton;
+    private JRadioButton radioButton4RadioButton;
     private int cnt;
 
     public ClockGUI(String title) {
@@ -62,6 +66,18 @@ public class ClockGUI extends JFrame {
                 btnClear.setBackground(btnClock.getBackground());
             }
         });
+        ActionListener listener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("fd");
+                Object o = e.getSource();
+                System.out.println(o == radioButton1RadioButton);
+            }
+        };
+        radioButton1RadioButton.addActionListener(listener);
+        radioButton2RadioButton.addActionListener(listener);
+        radioButton3RadioButton.addActionListener(listener);
+        radioButton4RadioButton.addActionListener(listener);
     }
 
     public static void main(String[] args) {
