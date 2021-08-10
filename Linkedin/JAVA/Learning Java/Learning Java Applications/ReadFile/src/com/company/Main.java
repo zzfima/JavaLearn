@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -19,13 +21,16 @@ public class Main {
             }
         }
 
+        List<String> lines = new ArrayList<>();
+
         try (FileReader fileReader = new FileReader(file);
              BufferedReader bufferedReader = new BufferedReader(fileReader);) {
             do {
                 String res = bufferedReader.readLine();
-                if (res != null)
+                if (res != null) {
                     System.out.println(res);
-                else
+                    lines.add(res);
+                } else
                     break;
             }
             while (true);
@@ -33,5 +38,8 @@ public class Main {
             System.out.println("Could read from file");
             return;
         }
+
+        System.out.println("*** lambda ***");
+        lines.forEach((s)-> System.out.println(s));
     }
 }
