@@ -7,11 +7,15 @@ public class Main {
 
     public static void main(String[] args) {
         ClothingItem ci1 = new ClothingItem();
-        System.out.println(ci1.getType());
-        System.out.println(ci1.getMaterial());
-
         ClothingItem ci2 = new Hat("hara");
-        System.out.println(ci2.getType());
-        System.out.println(ci2.getMaterial());
+        printInfo(ci1, ci2);
+    }
+
+    public static void printInfo(ClothingItem... clothingItems) {
+        for (ClothingItem clothingItem : clothingItems) {
+            System.out.println("*** Our Item: ***");
+            System.out.println('\t' + clothingItem.getType());
+            System.out.println('\t' + clothingItem.getMaterial());
+        }
     }
 }
