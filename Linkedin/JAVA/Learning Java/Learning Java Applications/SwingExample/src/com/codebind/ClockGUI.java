@@ -1,8 +1,11 @@
 package com.codebind;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -12,7 +15,7 @@ public class ClockGUI extends JFrame {
     private JTextField txtClock;
     private JLabel lblClock;
     private JProgressBar progressBarClock;
-    private JButton buttonCheckBox;
+    private JButton btnClear;
     private int cnt;
 
     public ClockGUI(String title) {
@@ -38,13 +41,25 @@ public class ClockGUI extends JFrame {
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.setContentPane(mainPanel);
         this.pack();
-        buttonCheckBox.addActionListener(new ActionListener() {
+        btnClear.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 lblClock.setText("");
                 txtClock.setText("");
                 cnt = 0;
                 progressBarClock.setValue(cnt);
+            }
+        });
+        btnClear.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                btnClear.setBackground(Color.red);
+            }
+        });
+        btnClear.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseExited(MouseEvent e) {
+                btnClear.setBackground(btnClock.getBackground());
             }
         });
     }
