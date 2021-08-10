@@ -10,7 +10,7 @@ public class Main {
         System.out.println(ci1.getType());
         System.out.println(ci1.getMaterial());
 
-        ClothingItem ci2 = new Hat();
+        ClothingItem ci2 = new Hat("hara");
         System.out.println(ci2.getType());
         System.out.println(ci2.getMaterial());
     }
