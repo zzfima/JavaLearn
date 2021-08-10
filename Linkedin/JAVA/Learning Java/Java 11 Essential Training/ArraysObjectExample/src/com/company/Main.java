@@ -4,8 +4,7 @@ import com.model.ClothingItem;
 import com.model.Hat;
 import com.model.Shirt;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Main {
 
@@ -22,6 +21,14 @@ public class Main {
         itemsList.add(itemsArray[1]);
         getInfo(itemsList.toArray(itemsArray));
         System.out.println(itemsList.get(0).getType());
+
+        Map<String, ClothingItem> itemsMap = new HashMap();
+        itemsMap.put("first", itemsArray[0]);
+        itemsMap.put("second", itemsArray[1]);
+        Set<String> keys = itemsMap.keySet();
+        for (String key : keys) {
+            System.out.println(itemsMap.get(key).getType());
+        }
     }
 
     public static void getInfo(ClothingItem... items) {
