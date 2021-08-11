@@ -71,7 +71,14 @@ public class ClockGUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 System.out.println("fd");
                 Object o = e.getSource();
-                System.out.println(o == radioButton1RadioButton);
+                if (o == radioButton1RadioButton)
+                    lblClock.setText("radio Button 1 selected");
+                else if (o == radioButton2RadioButton)
+                    lblClock.setText("radio Button 2 selected");
+                else if (o == radioButton3RadioButton)
+                    lblClock.setText("radio Button 3 selected");
+                else if (o == radioButton4RadioButton)
+                    lblClock.setText("radio Button 4 selected");
             }
         };
         radioButton1RadioButton.addActionListener(listener);
