@@ -44,6 +44,7 @@ public class ClockGUI extends JFrame {
 
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.setContentPane(mainPanel);
+        this.setResizable(false);
         this.pack();
         btnClear.addActionListener(new ActionListener() {
             @Override
