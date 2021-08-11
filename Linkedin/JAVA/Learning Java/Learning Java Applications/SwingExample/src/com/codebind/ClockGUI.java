@@ -26,6 +26,20 @@ public class ClockGUI extends JFrame {
         super(title);
         cnt = 0;
 
+        btnClock.addActionListener((e) -> {
+            Calendar calendar = Calendar.getInstance();
+            SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+            String msg = formatter.format(calendar.getTime());
+            txtClock.setText(msg);
+            lblClock.setText(msg);
+
+            cnt += 10;
+            if (cnt == 110)
+                cnt = 0;
+            progressBarClock.setValue(cnt);
+        });
+
+        /* Old style
         btnClock.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -41,6 +55,7 @@ public class ClockGUI extends JFrame {
                 progressBarClock.setValue(cnt);
             }
         });
+         */
 
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.setContentPane(mainPanel);
@@ -52,6 +67,7 @@ public class ClockGUI extends JFrame {
                 lblClock.setText("");
                 txtClock.setText("");
                 cnt = 0;
+
                 progressBarClock.setValue(cnt);
             }
         });
@@ -70,16 +86,10 @@ public class ClockGUI extends JFrame {
         ActionListener listener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("fd");
                 Object o = e.getSource();
-                if (o == radioButton1RadioButton)
-                    lblClock.setText("radio Button 1 selected");
-                else if (o == radioButton2RadioButton)
-                    lblClock.setText("radio Button 2 selected");
-                else if (o == radioButton3RadioButton)
-                    lblClock.setText("radio Button 3 selected");
-                else if (o == radioButton4RadioButton)
-                    lblClock.setText("radio Button 4 selected");
+                if (o instanceof JRadioButton b) {
+                    lblClock.setText(b.getText());
+                }
             }
         };
         radioButton1RadioButton.addActionListener(listener);
