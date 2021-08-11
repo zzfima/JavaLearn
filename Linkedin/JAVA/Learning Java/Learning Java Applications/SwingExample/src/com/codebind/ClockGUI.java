@@ -83,19 +83,12 @@ public class ClockGUI extends JFrame {
                 btnClear.setBackground(btnClock.getBackground());
             }
         });
-        ActionListener listener = new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Object o = e.getSource();
-                if (o instanceof JRadioButton b) {
-                    lblClock.setText(b.getText());
-                }
-            }
-        };
-        radioButton1RadioButton.addActionListener(listener);
-        radioButton2RadioButton.addActionListener(listener);
-        radioButton3RadioButton.addActionListener(listener);
-        radioButton4RadioButton.addActionListener(listener);
+
+        RadioButtonListener radioButtonListener = new RadioButtonListener(lblClock);
+        radioButton1RadioButton.addActionListener(radioButtonListener);
+        radioButton2RadioButton.addActionListener(radioButtonListener);
+        radioButton3RadioButton.addActionListener(radioButtonListener);
+        radioButton4RadioButton.addActionListener(radioButtonListener);
     }
 
     public static void main(String[] args) {
