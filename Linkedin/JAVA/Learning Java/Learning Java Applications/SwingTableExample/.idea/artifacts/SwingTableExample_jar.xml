@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="SwingTableExample:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SwingTableExample_jar</output-path>
+    <root id="archive" name="SwingTableExample.jar">
+      <element id="module-output" name="SwingTableExample" />
+    </root>
+  </artifact>
+</component>
