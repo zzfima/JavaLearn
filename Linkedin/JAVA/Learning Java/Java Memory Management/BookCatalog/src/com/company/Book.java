@@ -7,10 +7,18 @@ public class Book {
     private Price price;
 
     public Book(int id, String title, String author, Double price) {
+        this(id, title, author, new Price(price));
+    }
+
+    public Book(Book book) {
+        this(book.id, book.title, book.author, book.price);
+    }
+
+    public Book(int id, String title, String author, Price price) {
         this.id = id;
         this.title = title;
         this.author = author;
-        this.price = new Price(price);
+        this.price = price;
     }
 
     public int getId() {

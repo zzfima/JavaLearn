@@ -16,8 +16,7 @@ public class Price {
     }
 
     public Price(Price price) {
-        this.rates = new HashMap<>(price.rates);
-        this.value = price.value;
+        this(price.value);
     }
 
     public Double convert(String toCurrency) {
