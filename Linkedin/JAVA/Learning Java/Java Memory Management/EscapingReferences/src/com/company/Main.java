@@ -11,5 +11,10 @@ public class Main {
         for (Customer next : records.getCustomers().values()) {
             System.out.println(next);
         }
+
+        records.getCustomers().clear();
+        for (Customer next : records.getCustomers().values()) {
+            System.out.println(next);
+        }
     }
 }
