@@ -34,8 +34,4 @@ public class Price {
     public String toString() {
         return this.value.toString();
     }
-
-    public Map<String, Double> getRates() {
-        return rates;
-    }
 }
