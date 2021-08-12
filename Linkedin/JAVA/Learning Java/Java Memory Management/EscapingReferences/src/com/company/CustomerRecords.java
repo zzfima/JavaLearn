@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -16,7 +17,7 @@ public class CustomerRecords implements Iterable<Customer> {
     }
 
     public Map<String, Customer> getCustomers() {
-        return new HashMap<String, Customer>(this.records);
+        return Collections.unmodifiableMap(this.records);
     }
 
     @Override
