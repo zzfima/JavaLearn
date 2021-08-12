@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookCollection {
-    private final List<Book> books;
+    private final List<BookReadOnly> books;
 
     public BookCollection() {
-        books = new ArrayList<Book>();
+        books = new ArrayList<BookReadOnly>();
         books.add(new Book(1, "Don Quixote", "Miguel De Cervantes", 3.99));
         books.add(new Book(2, "Pilgrim's Progress", "John Bunyan", 4.45));
         books.add(new Book(3, "Robinson Crusoe", "Daniel Defoe", 3.99));
@@ -20,17 +20,17 @@ public class BookCollection {
         books.add(new Book(10, "The Count of Monte Christo", "Alexandre Dumas", 3.99));
     }
 
-    public Book findBookByName(String title) {
-        for (Book book : books) {
+    public BookReadOnly findBookByName(String title) {
+        for (BookReadOnly book : books) {
             if (book.getTitle().equals(title)) {
-                return new Book(book);
+                return book;
             }
         }
         return null;
     }
 
     public void printAllBooks() {
-        for (Book book : books) {
+        for (BookReadOnly book : books) {
             System.out.println(book.getTitle() + ": " + book.getPrice());
         }
     }

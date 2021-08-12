@@ -1,9 +1,9 @@
 package com.company;
 
-public class Book {
+public class Book implements BookReadOnly {
     private final int id;
-    private final String title;
     private final String author;
+    private String title;
     private Price price;
 
     public Book(int id, String title, String author, Double price) {
@@ -21,22 +21,31 @@ public class Book {
         this.price = price;
     }
 
+    @Override
     public int getId() {
         return id;
     }
 
+    @Override
     public String getTitle() {
         return title;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    @Override
     public String getAuthor() {
         return author;
     }
 
+    @Override
     public String toString() {
         return title + " by " + author;
     }
 
+    @Override
     public Price getPrice() {
         return new Price(this.price);
     }
