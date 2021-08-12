@@ -1,9 +1,9 @@
 package com.company;
 
 public class Book {
-    private int id;
-    private String title;
-    private String author;
+    private final int id;
+    private final String title;
+    private final String author;
     private Price price;
 
     public Book(int id, String title, String author, Double price) {
@@ -30,7 +30,7 @@ public class Book {
     }
 
     public Price getPrice() {
-        return this.price;
+        return new Price(this.price);
     }
 
     public void setPrice(Double price) {

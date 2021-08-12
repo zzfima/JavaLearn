@@ -15,6 +15,11 @@ public class Price {
         rates.put("EUR", 0.8);
     }
 
+    public Price(Price price) {
+        this.rates = new HashMap<>(price.rates);
+        this.value = price.value;
+    }
+
     public Double convert(String toCurrency) {
         Double tmp = value;
 
