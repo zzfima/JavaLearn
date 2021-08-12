@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Price {
     private final Map<String, Double> rates;
-    private Double value;
+    private final Double value;
 
     public Price(Double value) {
         this.value = value;
@@ -16,12 +16,14 @@ public class Price {
     }
 
     public Double convert(String toCurrency) {
+        Double tmp = value;
+
         if (toCurrency.equals("USD")) {
-            return value;
+            return tmp;
         } else {
             Double conversion = rates.get("USD") / rates.get(toCurrency);
-            value = conversion * value;
-            return value;
+            tmp = conversion * tmp;
+            return tmp;
         }
     }
 
