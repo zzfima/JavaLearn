@@ -10,6 +10,11 @@ public class Main {
         records.addCustomer(new Customer("John2"));
         records.addCustomer(new Customer("Simon2"));
 
+        /*
+        records.getCustomers().clear();
+        records.iterator().remove();
+        */
+
         for (Customer next : records) {
             System.out.println(next);
         }
