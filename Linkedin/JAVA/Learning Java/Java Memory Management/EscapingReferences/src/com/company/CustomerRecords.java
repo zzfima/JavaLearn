@@ -5,23 +5,27 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-public class CustomerRecords implements Iterable<Customer> {
-    private Map<String, Customer> records;
+public class CustomerRecords implements Iterable<CustomerReadOnly> {
+    private Map<String, CustomerReadOnly> records;
 
     public CustomerRecords() {
-        this.records = new HashMap<String, Customer>();
+        this.records = new HashMap<String, CustomerReadOnly>();
     }
 
-    public void addCustomer(Customer c) {
+    public void addCustomer(CustomerReadOnly c) {
         this.records.put(c.getName(), c);
     }
 
-    public Map<String, Customer> getCustomers() {
+    public Map<String, CustomerReadOnly> getCustomers() {
         return Collections.unmodifiableMap(this.records);
     }
 
     @Override
-    public Iterator<Customer> iterator() {
+    public Iterator<CustomerReadOnly> iterator() {
         return records.values().iterator();
+    }
+
+    public CustomerReadOnly getCustomerByName(String name) {
+        return this.records.get(name);
     }
 }
