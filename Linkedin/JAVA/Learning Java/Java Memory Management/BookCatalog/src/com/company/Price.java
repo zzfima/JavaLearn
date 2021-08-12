@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Price {
-    private Map<String, Double> rates;
+    private final Map<String, Double> rates;
     private Double value;
 
     public Price(Double value) {

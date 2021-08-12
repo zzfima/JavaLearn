@@ -1,0 +1,29 @@
+Index: src/com/company/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.company;\r\n\r\npublic class Main {\r\n\r\n    public static void main(String[] args) {\r\n\t// write your code here\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/com/company/Main.java b/src/com/company/Main.java
+--- a/src/com/company/Main.java	
++++ b/src/com/company/Main.java	
+@@ -1,8 +1,18 @@
+ package com.company;
+ 
+ public class Main {
+-
+     public static void main(String[] args) {
+-	// write your code here
++        int v1 = 5;
++        Integer v2 = 5;
++
++        changeNum(v1);
++        changeNum(v2);
++
++        System.out.println(v1);
++        System.out.println(v2);
++    }
++
++    private static void changeNum(Integer v1) {
++        v1 = 0;
+     }
+ }
