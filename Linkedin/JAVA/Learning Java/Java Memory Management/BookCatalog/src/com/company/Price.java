@@ -16,7 +16,6 @@ public class Price {
     }
 
     public Double convert(String toCurrency) {
-
         if (toCurrency.equals("USD")) {
             return value;
         } else {
