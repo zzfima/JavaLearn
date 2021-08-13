@@ -19,7 +19,8 @@ public class Main {
                 e.printStackTrace();
             }
             cm.howManyCustomers();
-            System.out.println("Available memory: " + Runtime.getRuntime().freeMemory() / 1024 + "k");
+            System.out.println("Available memory: " +
+                    Runtime.getRuntime().freeMemory() / 1024 + "k");
         }
     }
 }

@@ -18,5 +18,3 @@ public class Customer {
         return id + " : " + name;
     }
 }
-
-
