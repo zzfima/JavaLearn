@@ -11,7 +11,7 @@ public class Customer {
         return name;
     }
 
-    public void finalize() {
+    protected void finalize() {
         System.out.println("Finalizer for " + this.name);
     }
 }

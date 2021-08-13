@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         Runtime runtime = Runtime.getRuntime();
         System.out.println("Free memory before for: " + runtime.freeMemory() / (1024 * 1024) + " Mb");
-        for (int i = 0; i < 1000000; i++) {
+        for (int i = 0; i < 100; i++) {
             Customer c = new Customer("Vasia" + i);
         }
         System.out.println("Free memory after for: " + runtime.freeMemory() / (1024 * 1024) + " Mb");
