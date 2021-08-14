@@ -16,6 +16,11 @@ public class CustomerManager {
         }
         customers.add(customer);
     }
+/* Software Leak Code
+    public Customer getNextCustomer() {
+        return customers.get(0);
+    }
+*/
 
     public Customer getNextCustomer() {
         Customer result = null;
