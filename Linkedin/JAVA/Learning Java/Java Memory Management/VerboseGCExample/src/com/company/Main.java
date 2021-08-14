@@ -5,7 +5,7 @@ import java.util.ArrayList;
 //Set VM settings: -verbose:gc
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         ArrayList<Customer> customers = new ArrayList<>();
 
         while (true) {
@@ -15,6 +15,7 @@ public class Main {
                 for (int i = 0; i < 10; i++) {
                     customers.remove(0);
                 }
+//                Thread.sleep(1);
             }
         }
     }
