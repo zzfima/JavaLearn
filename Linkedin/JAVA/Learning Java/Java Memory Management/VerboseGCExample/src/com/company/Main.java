@@ -7,6 +7,7 @@ import java.util.ArrayList;
 // -Mxm10m maximum heap size
 // -Mxs10m start heap size
 // -Xmn10m young generation
+// - XX:HeapDumpOnOutOfMemory creates heap dump when out of memory
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
