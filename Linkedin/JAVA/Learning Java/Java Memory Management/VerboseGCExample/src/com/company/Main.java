@@ -13,6 +13,7 @@ import java.util.ArrayList;
 // -XX:+UseParallelGC
 // -XX:+UseConcMarkSweepGC depricated RIP
 // -XX:+UseG1GC
+// -XX:+PrintCommandLineFlags print default GC
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
