@@ -14,7 +14,6 @@ import java.util.ArrayList;
 // -XX:+UseConcMarkSweepGC depricated RIP
 // -XX:+UseG1GC
 
-
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         ArrayList<Customer> customers = new ArrayList<>();
