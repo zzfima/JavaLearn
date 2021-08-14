@@ -3,9 +3,10 @@ package com.company;
 import java.util.ArrayList;
 
 //Set VM settings:
-// -verbose:gc
-// -Mxm10m
-//-Mxs10m
+// -verbose:gc print all gc operaions to terminal
+// -Mxm10m maximum heap size
+// -Mxs10m start heap size
+// -Xmn10m young generation
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
