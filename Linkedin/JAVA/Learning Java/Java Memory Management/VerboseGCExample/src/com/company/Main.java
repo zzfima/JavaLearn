@@ -2,7 +2,10 @@ package com.company;
 
 import java.util.ArrayList;
 
-//Set VM settings: -verbose:gc
+//Set VM settings:
+// -verbose:gc
+// -Mxm10m
+//-Mxs10m
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
