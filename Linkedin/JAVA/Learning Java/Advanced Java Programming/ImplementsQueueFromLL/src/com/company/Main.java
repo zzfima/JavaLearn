@@ -20,7 +20,7 @@ public class Main {
 
     private static void serveCustomers(LinkedList<Customer> customers) {
         while (!customers.isEmpty()) {
-            Customer c = customers.remove(0);
+            Customer c = customers.poll();
             c.serve();
             System.out.println(c);
         }
