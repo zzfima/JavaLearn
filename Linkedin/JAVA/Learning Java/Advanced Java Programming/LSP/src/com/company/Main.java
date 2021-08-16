@@ -22,6 +22,9 @@ public class Main {
         buildings2.add(new Office());
         //printBuildings1(buildings2);
         printBuildings2(buildings2);
+
+        addHouse(buildings1);
+        addHouse(buildings2);
     }
 
     private static void printBuilding(Building building) {
@@ -36,5 +39,9 @@ public class Main {
     private static void printBuildings2(List<? extends Building> buildings) {
         for (Building b : buildings)
             System.out.println(b);
+    }
+
+    private static void addHouse(List<? super Office> buildings) {
+        buildings.add(new Office());
     }
 }
