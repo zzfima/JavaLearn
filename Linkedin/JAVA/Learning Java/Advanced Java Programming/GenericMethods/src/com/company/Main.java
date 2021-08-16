@@ -13,13 +13,26 @@ public class Main {
         List<Boolean> booleanList = objectToList(booleans);
         List<String> integerList = objectToList(integers);
         List<Character> characterList = objectToList(characters);
-        System.out.println(integerList.get(0));
+        //System.out.println(integerList.get(0));
+
+        List<Boolean> booleanList1 = objectToListGeneric(booleans);
+        List<Integer> integerList1 = objectToListGeneric(integers);
+        List<Character> characterList1 = objectToListGeneric(characters);
+        System.out.println(integerList1.get(0));
     }
 
     private static List objectToList(Object[] objects) {
         List<Object> list = new ArrayList<>();
         for (Object o : objects)
             list.add(o);
+
+        return list;
+    }
+
+    private static <T> List<T> objectToListGeneric(T[] ts) {
+        List<T> list = new ArrayList<>();
+        for (T t : ts)
+            list.add(t);
 
         return list;
     }
