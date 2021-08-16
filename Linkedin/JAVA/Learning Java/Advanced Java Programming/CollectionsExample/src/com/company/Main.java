@@ -27,5 +27,13 @@ public class Main {
             System.out.println(o);
         for (int i : map.values())
             System.out.println(i);
+
+        Queue<Integer> queue = new PriorityQueue<Integer>();
+        queue.add(11);
+        queue.add(12);
+        queue.add(13);
+        while (!queue.isEmpty()) {
+            System.out.println(queue.remove());
+        }
     }
 }
