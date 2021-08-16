@@ -11,8 +11,9 @@ public class Main {
 
     public static void main(String[] args) {
         List<Boolean> booleanList = objectToList(booleans);
-        List<Integer> integerList = objectToList(integers);
+        List<String> integerList = objectToList(integers);
         List<Character> characterList = objectToList(characters);
+        System.out.println(integerList.get(0));
     }
 
     private static List objectToList(Object[] objects) {
