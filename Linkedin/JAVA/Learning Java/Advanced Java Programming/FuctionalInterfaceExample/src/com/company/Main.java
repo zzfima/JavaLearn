@@ -13,5 +13,11 @@ public class Main {
 
         GreetingMessage gm2 = (s) -> System.out.println("GM2, " + s);
         gm2.Greet("Buddy");
+
+        createInstance("Hello my friend").Greet("Jojo");
+    }
+
+    private static GreetingMessage createInstance(String greetingMsg) {
+        return (d) -> System.out.println(greetingMsg + ", " + d);
     }
 }
