@@ -14,10 +14,15 @@ public class Main {
         GreetingMessage gm2 = (s) -> System.out.println("GM2, " + s);
         gm2.Greet("Buddy");
 
-        createInstance("Hello my friend").Greet("Jojo");
+        GreetingMessage gm3 = createInstance("Hello my friend");
+        printMsg(gm3, "Zvulon");
     }
 
     private static GreetingMessage createInstance(String greetingMsg) {
         return (d) -> System.out.println(greetingMsg + ", " + d);
+    }
+
+    private static void printMsg(GreetingMessage gm, String msg) {
+        gm.Greet(msg);
     }
 }
