@@ -25,6 +25,11 @@ public class Main {
         System.out.println("***Streams 2 lines***");
         Stream<Book> sb = books.stream().filter(b -> b.getAuthor().startsWith("J"));
         sb.forEach(b -> System.out.println(b));
+
+        System.out.println("***Streams 2 lines 2 filters***");
+        Stream<Book> sb1 = books.stream().filter(b -> b.getAuthor().startsWith("J"));
+        Stream<Book> sb2 = sb1.filter(b->b.getTitle().startsWith("E"));
+        sb2.forEach(b -> System.out.println(b));
     }
 
     private static List<Book> populateBooks() {
