@@ -1,8 +1,12 @@
 package com.company;
 
+import java.awt.image.BufferedImage;
+
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+
+        BufferedImage bi;
+        System.out.println("Hello world");
     }
 }
