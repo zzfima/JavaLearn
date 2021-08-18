@@ -1,5 +1,7 @@
 package com.helloworld;
 
+import net.GGG.Printer;
+
 import java.awt.image.BufferedImage;
 
 public class Main {
@@ -8,5 +10,7 @@ public class Main {
 
         BufferedImage bi;
         System.out.println("Hello world");
+
+        Printer.DoIt();
     }
 }
