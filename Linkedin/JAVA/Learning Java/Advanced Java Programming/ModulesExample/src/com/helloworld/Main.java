@@ -1,4 +1,4 @@
-package com.company;
+package com.helloworld;
 
 import java.awt.image.BufferedImage;
 
