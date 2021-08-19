@@ -16,7 +16,7 @@ public class KafkaSimpleProducer {
 
         //List of brokers to connect to
         kafkaProps.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG,
-                            "localhost:9092");
+                            "localhost:2181");
 
         //Serializer class used to convert Keys to Byte Arrays
         kafkaProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG,
@@ -39,7 +39,7 @@ public class KafkaSimpleProducer {
                 //Create a producer Record
                 ProducerRecord<String,String> kafkaRecord =
                         new ProducerRecord<String,String>(
-                                "kafka.learning.orders",    //Topic name
+                                "mytopic3",    //Topic name
                                 String.valueOf(i),          //Key for the message
                                 "This is order" + i         //Message Content
                         );
