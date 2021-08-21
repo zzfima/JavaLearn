@@ -46,4 +46,10 @@ public class DemoApplication {
     public ResponseEntity<String> DDD() {
         return new ResponseEntity<>("deleted", HttpStatus.OK);
     }
+
+    // *** Put mapping ***
+    @PutMapping("/application")
+    public ResponseEntity<String> PPP() {
+        return new ResponseEntity<>("put", HttpStatus.OK);
+    }
 }
