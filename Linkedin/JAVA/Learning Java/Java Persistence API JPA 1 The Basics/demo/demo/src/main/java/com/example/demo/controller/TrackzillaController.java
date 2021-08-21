@@ -16,7 +16,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.util.List;
 
 @RestController
-@RequestMapping("/tza")
+//@RequestMapping("/tza")
 public class TrackzillaController {
 
     @Autowired
