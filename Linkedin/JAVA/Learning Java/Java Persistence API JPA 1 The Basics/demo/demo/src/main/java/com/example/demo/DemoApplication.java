@@ -4,10 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @SpringBootApplication
 @RestController
@@ -41,6 +38,12 @@ public class DemoApplication {
     // *** Post mapping ***
     @PostMapping("/application")
     public ResponseEntity<String> HHH() {
-        return new ResponseEntity<String>("ggg", HttpStatus.OK);
+        return new ResponseEntity<>("posted", HttpStatus.OK);
+    }
+
+    // *** Delete mapping ***
+    @DeleteMapping("/application")
+    public ResponseEntity<String> DDD() {
+        return new ResponseEntity<>("deleted", HttpStatus.OK);
     }
 }
