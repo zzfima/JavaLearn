@@ -20,8 +20,8 @@ public class TicketDAO implements ITicketDAO {
         //note Ticket is the class name; not the table name; class name is case-sensitive; use class field names - column names
         String query =
                 "select t " +
-                        "from Ticket t " +
-                        "order by t.title";
+                "from Ticket t " +
+                "order by t.title";
         return (List<Ticket>) entityManager.createQuery(query).getResultList();
     }
 
