@@ -6,8 +6,9 @@ import javax.persistence.*;
 @Table(name = "applications")
 public class Application {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+
+    @Id //Primary key field
+    @GeneratedValue(strategy = GenerationType.AUTO) //Generates unique identifier for the entity
     @Column(name = "application_id")
     private Integer id;
 
