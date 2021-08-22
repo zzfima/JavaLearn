@@ -21,7 +21,7 @@ public class ApplicationDAO implements IApplicationDAO {
 
     @Override
     public boolean applicationExists(String name, String owner) {
-        //note application is the class name; not the table name; class name is case sensitive; use class field names - column names
+        //note application is the class name; not the table name; class name is case-sensitive; use class field names - column names
         String jpql = "from Application as a WHERE a.name = ? and a.owner = ?";
         int count = entityManager.createQuery(jpql).setParameter(0, name).setParameter(1, owner).getResultList().size();
         return count > 0;
@@ -45,5 +45,4 @@ public class ApplicationDAO implements IApplicationDAO {
     public void deleteApplication(int applicationId) {
         entityManager.remove(getApplicationById(applicationId));
     }
-
 }

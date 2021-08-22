@@ -28,7 +28,6 @@ public class ApplicationService implements IApplicationService {
     @Override
     public void updateApplication(Application application) {
         applicationDAO.updateApplication(application);
-
     }
 
     @Override

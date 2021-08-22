@@ -17,8 +17,11 @@ public class TicketDAO implements ITicketDAO {
 
     @Override
     public List<Ticket> getAllTickets() {
-        //note Ticket is the class name; not the table name; class name is case sensitive; use class field names - column names
-        String query = "select t from Ticket t order by t.title";
+        //note Ticket is the class name; not the table name; class name is case-sensitive; use class field names - column names
+        String query =
+                "select t " +
+                        "from Ticket t " +
+                        "order by t.title";
         return (List<Ticket>) entityManager.createQuery(query).getResultList();
     }
 
@@ -46,7 +49,6 @@ public class TicketDAO implements ITicketDAO {
     @Override
     public void deleteTicket(int ticketId) {
         entityManager.remove(getTicketById(ticketId));
-
     }
 
     @Override
