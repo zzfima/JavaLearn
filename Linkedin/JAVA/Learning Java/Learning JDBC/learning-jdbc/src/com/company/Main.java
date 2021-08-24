@@ -8,7 +8,7 @@ import java.sql.Statement;
 public class Main {
 
     public static void main(String[] args) {
-        DatabaseConnectionManager dcm = new DatabaseConnectionManager("localhost", "hplussport", "postgres", "1511");
+        DatabaseConnectionManager dcm = new DatabaseConnectionManager("localhost", "hplussport", "postgres", "sa");
         Connection connection = null;
         try {
             connection = dcm.getConnection();
