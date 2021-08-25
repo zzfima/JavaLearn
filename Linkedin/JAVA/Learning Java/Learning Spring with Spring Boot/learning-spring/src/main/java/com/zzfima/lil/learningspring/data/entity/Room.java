@@ -19,6 +19,8 @@ public class Room {
     @Column(name = "BED_INFO")
     private String bedInfo;
 
+    // *** Getters and Setters ***
+
     public long getRoomId() {
         return roomId;
     }

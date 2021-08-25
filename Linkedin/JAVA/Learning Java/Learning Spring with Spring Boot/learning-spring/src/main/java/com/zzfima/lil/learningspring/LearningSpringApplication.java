@@ -1,8 +1,10 @@
 package com.zzfima.lil.learningspring;
 
 import com.zzfima.lil.learningspring.data.entity.Guest;
+import com.zzfima.lil.learningspring.data.entity.Reservation;
 import com.zzfima.lil.learningspring.data.entity.Room;
 import com.zzfima.lil.learningspring.data.repository.GuestRepository;
+import com.zzfima.lil.learningspring.data.repository.ReservationRepository;
 import com.zzfima.lil.learningspring.data.repository.RoomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -39,6 +41,18 @@ public class LearningSpringApplication {
         @GetMapping
         public Iterable<Guest> getGuests() {
             return this.guestRepository.findAll();
+        }
+    }
+
+    @RestController
+    @RequestMapping("/reservations")
+    public class ReservationController {
+        @Autowired
+        private ReservationRepository reservationRepository;
+
+        @GetMapping
+        public Iterable<Reservation> getGuests() {
+            return this.reservationRepository.findAll();
         }
     }
 }
