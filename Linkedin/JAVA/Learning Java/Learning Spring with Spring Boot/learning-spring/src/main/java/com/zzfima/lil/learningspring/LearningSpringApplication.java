@@ -12,21 +12,19 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 public class LearningSpringApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(LearningSpringApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(LearningSpringApplication.class, args);
+    }
 
-	@RestController
-	@RequestMapping("/rooms")
-	public class RoomController{
-		@Autowired
-		private RoomRepository roomRepository;
+    @RestController
+    @RequestMapping("/rooms")
+    public class RoomController {
+        @Autowired
+        private RoomRepository roomRepository;
 
-		@GetMapping
-		public Iterable<Room> getRooms(){
-			return this.roomRepository.findAll();
-		}
-
-	}
-
+        @GetMapping
+        public Iterable<Room> getRooms() {
+            return this.roomRepository.findAll();
+        }
+    }
 }
