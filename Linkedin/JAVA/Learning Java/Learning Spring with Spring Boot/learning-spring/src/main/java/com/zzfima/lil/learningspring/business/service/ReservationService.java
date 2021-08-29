@@ -1,6 +1,7 @@
 package com.zzfima.lil.learningspring.business.service;
 
 import com.zzfima.lil.learningspring.business.domain.RoomReservation;
+import com.zzfima.lil.learningspring.data.entity.Reservation;
 import com.zzfima.lil.learningspring.data.entity.Room;
 import com.zzfima.lil.learningspring.data.repository.GuestRepository;
 import com.zzfima.lil.learningspring.data.repository.ReservationRepository;
@@ -37,6 +38,10 @@ public class ReservationService {
             roomReservation.setRoomName(room.getRoomName());
             roomReservation.setRoomNumber(room.getRoomNumber());
             roomReservationMap.put(room.getRoomId(), roomReservation);
+        });
+        Iterable<Reservation> reservations = this.reservationRepository.findReservationByReservationDate(date);
+        reservations.forEach(reservation -> {
+
         });
         return null;
     }
